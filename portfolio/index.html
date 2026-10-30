@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#344333" />
+  <title>Patricia Rose Gonzales | IT Portfolio</title>
+  <meta name="description" content="Portfolio of Patricia Rose Gonzales — BS Information Technology graduate (Service Management, 2028) from Batangas State University. Open to entry-level IT support, service desk, and digital content roles." />
+
+  <!-- Social sharing (shows a nice preview when you send your link) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Patricia Rose Gonzales | IT Portfolio" />
+  <meta property="og:description" content="BS Information Technology graduate (Service Management). Open to entry-level IT and service roles." />
+  <meta property="og:image" content="profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Simple favicon, no extra file needed -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23344333'/><text x='50' y='64' font-size='44' text-anchor='middle' fill='%23F4EEE3' font-family='Georgia,serif'>PRG</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Structured data: helps Google understand who you are -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Patricia Rose Gonzales",
+    "jobTitle": "BS Information Technology Graduate",
+    "alumniOf": "Batangas State University – The National Engineering University",
+    "email": "mailto:patriciaroseleal@gmail.com",
+    "address": { "@type": "PostalAddress", "addressRegion": "Batangas", "addressCountry": "PH" },
+    "sameAs": [
+      "https://www.linkedin.com/in/patriciarosegonzales",
+      "https://www.facebook.com/patricia.gonzales"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --cream: #F4EEE3;
+      --beige: #EAE2D3;
+      --sage: #A6AA91;
+      --olive: #6B7358;        /* darkened for better text contrast */
+      --forest: #344333;
+      --taupe: #6A665A;        /* darkened: old #8D887A was too faint on cream */
+      --champagne: #C9B77D;
+      --white: #FBF8F1;
+      --line: rgba(52, 67, 51, 0.18);
+      --shadow: 0 18px 45px rgba(52, 67, 51, 0.10);
+      --radius: 22px;
+      --nav-h: 76px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--forest);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+
+    /* Keyboard focus that is actually visible */
+    :focus-visible {
+      outline: 3px solid var(--champagne);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -60px;
+      background: var(--forest);
+      color: var(--cream);
+      padding: 10px 16px;
+      z-index: 2000;
+      font-size: 13px;
+      font-weight: 700;
+      transition: top .2s;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      background: rgba(244, 238, 227, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow .3s ease;
+    }
+    .nav.scrolled { box-shadow: 0 6px 24px rgba(52, 67, 51, .08); }
+
+    .nav-inner {
+      min-height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 0; height: 1px;
+      background: var(--olive);
+      transition: width .3s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--forest);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+    section { padding: 100px 0; }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.05;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .section-lead { max-width: 640px; color: var(--taupe); margin-bottom: 10px; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+    .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 24px;
+      background: var(--forest);
+      color: var(--cream);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: 11px;
+      font-weight: 700;
+      border: 1px solid var(--forest);
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .3s ease, border-color .3s ease, transform .3s ease, color .3s ease;
+    }
+    .btn:hover { background: var(--olive); border-color: var(--olive); transform: translateY(-2px); }
+
+    .btn.ghost { background: transparent; color: var(--forest); }
+    .btn.ghost:hover { background: var(--forest); color: var(--cream); border-color: var(--forest); }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+      min-height: 100vh;
+      padding-top: 150px;
+      padding-bottom: 70px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: rgba(166, 170, 145, 0.20);
+      top: 100px; right: -160px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr .85fr;
+      align-items: center;
+      gap: 70px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      background: rgba(251, 248, 241, .7);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 26px;
+    }
+    .status i {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #4f9a5a;
+      box-shadow: 0 0 0 0 rgba(79, 154, 90, .6);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      70%  { box-shadow: 0 0 0 9px rgba(79, 154, 90, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(79, 154, 90, 0); }
+    }
+
+    .hero-kicker {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      font-style: italic;
+      color: var(--olive);
+      margin-bottom: 5px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(54px, 8vw, 100px);
+      line-height: .9;
+      letter-spacing: -3px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero-role {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 8px;
+    }
+    .hero-school { color: var(--taupe); font-size: 14px; margin-bottom: 22px; }
+
+    .hero-description { max-width: 540px; color: #52564d; font-size: 17px; margin-bottom: 32px; }
+
+    .photo-wrap { position: relative; width: min(450px, 100%); margin: auto; }
+
+    .photo-frame {
+      aspect-ratio: 4 / 5;
+      border-radius: 48% 48% 10px 10px;
+      overflow: hidden;
+      background: var(--sage);
+      border: 1px solid rgba(52, 67, 51, .22);
+      box-shadow: var(--shadow);
+    }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    .photo-placeholder {
+      width: 100%; height: 100%;
+      display: none;
+      place-items: center;
+      padding: 30px;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+    }
+    .photo-placeholder small { display: block; font-family: "DM Sans", sans-serif; font-size: 13px; margin-top: 8px; }
+
+    .photo-note {
+      position: absolute;
+      right: -35px; bottom: 50px;
+      width: 145px; height: 145px;
+      border-radius: 50%;
+      background: rgba(244, 238, 227, .95);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+
+    /* =========================
+       ABOUT + QUICK FACTS
+    ========================= */
+    .about { background: var(--beige); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .about-text { max-width: 760px; font-size: 17px; color: #52564d; }
+
+    .facts {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .fact { border-top: 1px solid var(--olive); padding-top: 14px; }
+    .fact strong { display: block; font-family: "Playfair Display", serif; font-size: 30px; line-height: 1.1; }
+    .fact span { font-size: 13px; color: var(--taupe); }
+
+    /* =========================
+       SKILLS
+    ========================= */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .skill-card {
+      background: rgba(251, 248, 241, .65);
+      border: 1px solid var(--line);
+      padding: 35px 28px;
+      border-radius: var(--radius);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .skill-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+
+    .skill-icon {
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background: var(--olive);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .skill-card h3 { font-family: "Playfair Display", serif; font-size: 27px; margin-bottom: 17px; }
+    .skill-card li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--taupe); }
+    .skill-card li:last-child { border-bottom: 0; }
+
+    /* =========================
+       FEATURED WORK
+    ========================= */
+    .work { background: var(--white); }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .work-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .work-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+
+    .work-label {
+      padding: 28px 28px 0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--olive);
+    }
+
+    .work-body { padding: 12px 28px 28px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .work-body h3 { font-family: "Playfair Display", serif; font-size: 24px; line-height: 1.2; }
+    .work-body p { font-size: 14px; color: var(--taupe); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 6px; }
+    .tags li {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--forest);
+    }
+
+    /* =========================
+       BACKGROUND / TIMELINE
+    ========================= */
+    .timeline { margin-top: 45px; border-left: 1px solid var(--olive); }
+
+    .timeline-item { position: relative; padding: 0 0 45px 42px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -7px; top: 6px;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      background: var(--olive);
+      border: 3px solid var(--cream);
+      box-shadow: 0 0 0 1px var(--olive);
+    }
+
+    .timeline-item h3 { font-family: "Playfair Display", serif; font-size: 27px; margin-bottom: 14px; }
+    .timeline-item ul { padding-left: 20px; list-style: disc; }
+    .timeline-item li { margin: 8px 0; color: var(--taupe); font-size: 15px; }
+    .timeline-item li strong { color: var(--forest); }
+
+    /* =========================
+       WHY HIRE
+    ========================= */
+    .why { background: var(--sage); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .why-card {
+      background: rgba(244, 238, 227, .8);
+      padding: 35px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(52, 67, 51, .16);
+    }
+    .why-number { color: var(--olive); font-family: "Playfair Display", serif; font-size: 36px; margin-bottom: 20px; }
+    .why-card h3 { font-family: "Playfair Display", serif; font-size: 26px; margin-bottom: 12px; }
+    .why-card p { color: #4d5247; font-size: 14.5px; }
+
+    /* =========================
+       CONTACT
+    ========================= */
+    .contact { background: var(--forest); color: var(--cream); }
+    .contact .eyebrow { color: var(--champagne); }
+    .contact-intro { max-width: 650px; color: #d8d6ca; margin-bottom: 35px; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    .contact-card {
+      padding: 25px;
+      border: 1px solid rgba(244, 238, 227, .22);
+      background: rgba(244, 238, 227, .06);
+      transition: background .3s ease, border-color .3s ease;
+    }
+    a.contact-card:hover { background: rgba(244, 238, 227, .12); border-color: var(--champagne); }
+
+    .contact-icon {
+      width: 26px;
+      height: 26px;
+      color: var(--champagne);
+      margin-bottom: 14px;
+      transition: transform .3s ease;
+    }
+    a.contact-card:hover .contact-icon { transform: scale(1.12); }
+
+    .contact-card span {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--champagne);
+      margin-bottom: 6px;
+    }
+    .contact-card strong { font-weight: 500; font-size: 15px; word-break: break-word; }
+
+    .copy-row { margin-top: 26px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .copy-row .btn { background: var(--cream); color: var(--forest); border-color: var(--cream); }
+    .copy-row .btn:hover { background: var(--champagne); border-color: var(--champagne); }
+    #copyMsg { font-size: 13px; color: var(--champagne); min-height: 1em; }
+
+    /* =========================
+       FOOTER + BACK TO TOP
+    ========================= */
+    footer {
+      background: var(--forest);
+      border-top: 1px solid rgba(244, 238, 227, .12);
+      color: #b5b8a8;
+      padding: 25px 0;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .to-top {
+      position: fixed;
+      right: 22px; bottom: 22px;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--forest);
+      color: var(--cream);
+      font-size: 18px;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity .3s ease, transform .3s ease;
+      z-index: 900;
+    }
+    .to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 960px) {
+      .work-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0; right: 0;
+        background: var(--cream);
+        padding: 25px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-links.open { display: flex; }
+      .menu-btn { display: block; }
+
+      .hero { padding-top: 120px; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 50px; }
+      .photo-wrap { max-width: 390px; }
+
+      .skills-grid, .why-grid, .work-grid, .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: min(100% - 28px, 1120px); }
+      section { padding: 75px 0; }
+      :root { --nav-h: 66px; }
+      .hero h1 { letter-spacing: -2px; }
+      .photo-note { right: -5px; bottom: 25px; width: 115px; height: 115px; font-size: 8px; }
+      .facts { grid-template-columns: 1fr; }
+      .btn-row .btn { width: 100%; justify-content: space-between; }
+    }
+
+    /* Respect users who turn off animations */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="Patricia Rose Gonzales, home">PRG.</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+      <nav aria-label="Main">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#background">Background</a></li>
+          <li><a href="#why">Why Hire Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="status"><i aria-hidden="true"></i> Open to entry-level opportunities</div>
+
+          <div class="hero-kicker">Hello, I'm</div>
+          <h1>Patricia<br>Rose<br>Gonzales</h1>
+
+          <div class="hero-role">BS Information Technology · Service Management</div>
+          <p class="hero-school">Batangas State University – TNEU, College of Informatics and Computing Sciences</p>
+
+          <p class="hero-description">
+            I'm an IT graduate who blends technical know-how with clear communication and
+            creative digital work. I'm looking for a role where I can support users, solve
+            problems, and keep growing.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+            <!-- Add your resume as resume.pdf in the same folder -->
+            <a class="btn ghost" href="resume.pdf" download>Download Resume <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <div class="photo-wrap">
+          <div class="photo-frame">
+            <!-- Put your photo in the same folder and name it: profile.jpg -->
+            <img
+              src="profile.jpg"
+              alt="Portrait of Patricia Rose Gonzales"
+              width="450" height="562"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="photo-placeholder">
+              <div>Add your professional photo here<small>Save it as profile.jpg</small></div>
+            </div>
+          </div>
+          <div class="photo-note">Technology<br>Service<br>Creativity</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+
+        <div class="reveal">
+          <div class="eyebrow">About Me</div>
+          <h2 class="section-title">Who I Am</h2>
+        </div>
+
+        <div class="reveal">
+          <p class="about-text">
+            I graduated in 2028 with a Bachelor of Science in Information Technology, majoring in
+            Service Management, from Batangas State University – TNEU Lipa Campus. Through
+            my coursework and projects, I built skills in communication, customer service,
+            problem-solving, and digital tools. Outside of school, I enjoy photography and
+            creating visual content. I value clear communication and teamwork, and I
+            always aim to improve through experience and feedback.
+          </p>
+
+          <div class="facts">
+            <div class="fact"><strong>2028</strong><span>BSIT graduate</span></div>
+            <div class="fact"><strong>Cisco</strong><span>Networking Academy trained</span></div>
+            <div class="fact"><strong>4 yrs</strong><span>of project &amp; team experience</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+
+        <div class="reveal">
+          <div class="eyebrow">Expertise</div>
+          <h2 class="section-title">Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Technical</h3>
+            <ul>
+              <li>HTML &amp; CSS</li>
+              <li>Basic Python</li>
+              <li>Computer troubleshooting</li>
+              <li>Networking fundamentals (Cisco)</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">MS</div>
+            <h3>Tools</h3>
+            <ul>
+              <li>Microsoft Word, Excel &amp; PowerPoint</li>
+              <li>Canva &amp; CapCut</li>
+              <li>Google Workspace</li>
+              <li>Social media platforms</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">✓</div>
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Written and verbal communication</li>
+              <li>Teamwork and collaboration</li>
+              <li>Time management</li>
+              <li>Customer service</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FEATURED WORK -->
+    <section class="work" id="work">
+      <div class="container">
+
+        <div class="reveal">
+          <div class="eyebrow">Selected Work</div>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-lead">
+            A snapshot of the work I've done through school projects, digital marketing,
+            and technical training.
+          </p>
+        </div>
+
+        <div class="work-grid">
+
+          <article class="work-card reveal">
+            <div class="work-label">01 · Academic</div>
+            <div class="work-body">
+              <h3>IT Academic Projects</h3>
+              <p>
+                Group projects covering system development, documentation, and
+                problem-solving, where I collaborated with teammates from planning to
+                final presentation.
+              </p>
+              <ul class="tags"><li>Documentation</li><li>Teamwork</li><li>Problem-solving</li></ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-label">02 · Creative</div>
+            <div class="work-body">
+              <h3>Digital Marketing Designs</h3>
+              <p>
+                Promotional pubmats and posters for products and services, designed in
+                Canva and promoted through social media platforms.
+              </p>
+              <ul class="tags"><li>Canva</li><li>Social media</li><li>Branding</li></ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-label">03 · Training</div>
+            <div class="work-body">
+              <h3>Networking Coursework</h3>
+              <p>
+                Hands-on training in network setup, switching, routing, and wireless
+                essentials through Cisco Networking Academy.
+              </p>
+              <ul class="tags"><li>Networking</li><li>Switching</li><li>Routing</li></ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BACKGROUND -->
+    <section id="background">
+      <div class="container">
+
+        <div class="reveal">
+          <div class="eyebrow">My Background</div>
+          <h2 class="section-title">Education &amp; Experience</h2>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+            <h3>Education</h3>
+            <ul>
+              <li>
+                <strong>Bachelor of Science in Information Technology, major in Service Management</strong>
+                — Batangas State University, Lipa Campus (Graduated 2028)
+              </li>
+              <li>Senior High School, STEM — PVGMA (Graduated 2024)</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal">
+            <h3>Projects &amp; Experience</h3>
+            <ul>
+              <li>
+                <strong>IT Academic Projects (2024–2028)</strong> — Worked on system development,
+                documentation, and problem-solving in team settings.
+              </li>
+              <li>
+                <strong>Digital Marketing Projects (2024–2028)</strong> — Designed promotional pubmats
+                and posters and helped promote products and services on social media.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal">
+            <h3>Training &amp; Certifications</h3>
+            <ul>
+              <li>Cisco Networking Academy — Introduction to Networks</li>
+              <li>Cisco Networking Academy — Switching, Routing, and Wireless Essentials</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WHY HIRE ME -->
+    <section class="why" id="why">
+      <div class="container">
+
+        <div class="reveal">
+          <div class="eyebrow">For Employers</div>
+          <h2 class="section-title">Why Hire Me?</h2>
+        </div>
+
+        <div class="why-grid">
+
+          <article class="why-card reveal">
+            <div class="why-number">01</div>
+            <h3>I learn quickly.</h3>
+            <p>I pick up new tools fast and welcome feedback. Moving from Python basics to
+               networking to design tools shows how I adapt.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-number">02</div>
+            <h3>I am reliable.</h3>
+            <p>I consistently completed school projects and requirements on time while
+               managing multiple academic tasks.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-number">03</div>
+            <h3>I work well with others.</h3>
+            <p>I communicate clearly and support my teammates, as shown in my group projects
+               and presentations.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container">
+
+        <div class="reveal">
+          <div class="eyebrow">Let's Connect</div>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="contact-intro">
+            Interested in working together or have an opening on your team? I'd love to hear
+            from you. I usually reply within a day or two.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <a class="contact-card" href="mailto:patriciaroseleal@gmail.com">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>Email</span>
+            <strong>patriciaroseleal@gmail.com</strong>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/patriciarosegonzales" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+            <strong>linkedin.com/in/patriciarosegonzales</strong>
+          </a>
+
+          <a class="contact-card" href="https://www.facebook.com/patricia.gonzales" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span>Facebook</span>
+            <strong>facebook.com/patricia.gonzales</strong>
+          </a>
+
+          <div class="contact-card">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span>Location</span>
+            <strong>Batangas, Philippines</strong>
+          </div>
+
+        </div>
+
+        <div class="copy-row">
+          <button class="btn" id="copyEmail" type="button">Copy email address</button>
+          <span id="copyMsg" role="status" aria-live="polite"></span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year">2028</span> Patricia Rose Gonzales. All rights reserved.
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script>
+    const nav = document.getElementById("nav");
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    const toTop = document.getElementById("toTop");
+
+    /* Mobile menu */
+    function setMenu(open) {
+      navLinks.classList.toggle("open", open);
+      menuBtn.setAttribute("aria-expanded", open);
+      menuBtn.textContent = open ? "✕" : "☰";
+    }
+    menuBtn.addEventListener("click", () => setMenu(!navLinks.classList.contains("open")));
+    navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+    /* Nav shadow + back-to-top button */
+    function onScroll() {
+      nav.classList.toggle("scrolled", window.scrollY > 10);
+      toTop.classList.toggle("show", window.scrollY > 600);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    /* Reveal sections as they scroll into view */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    /* Highlight the current section in the nav */
+    const links = [...navLinks.querySelectorAll("a")];
+    const sections = links.map(a => document.querySelector(a.getAttribute("href")));
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + entry.target.id));
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach(s => s && spy.observe(s));
+
+    /* Copy email */
+    document.getElementById("copyEmail").addEventListener("click", async () => {
+      const msg = document.getElementById("copyMsg");
+      try {
+        await navigator.clipboard.writeText("patriciaroseleal@gmail.com");
+        msg.textContent = "Email copied!";
+      } catch {
+        msg.textContent = "Press Ctrl/Cmd + C on the email above.";
+      }
+      setTimeout(() => (msg.textContent = ""), 2500);
+    });
+
+  </script>
+</body>
+</html>
